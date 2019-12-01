@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PropCompComponent } from './prop-comp/prop-comp.component';
+import { StyleBindComponent } from './style-bind/style-bind.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PropCompComponent
+    PropCompComponent,
+    StyleBindComponent
   ],
   imports: [
     BrowserModule
