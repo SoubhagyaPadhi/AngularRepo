@@ -23,7 +23,7 @@ export class PropCompComponent implements OnInit {
   public myTestId2 = "2-MYTESTID";
   public isDisabled = false;
   public textClass = "text-warning";
-  public hasError = false;
+  public hasError = true;
   public hasWarning = false;
   public myClasses={
     "text-success":!this.hasError,
