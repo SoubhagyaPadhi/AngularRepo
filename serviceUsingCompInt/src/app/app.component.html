@@ -1,1 +1,4 @@
-<app-serv-int [parentNodeVal]="emplArr"></app-serv-int>
+<app-serv-int [parentNodeVal]="emplArr" (childEvent)="childArr=$event"></app-serv-int>
+<div *ngFor='let employee of childArr;index as i'>
+    <h2>{{i}} {{employee.name}} {{employee.age}} {{employee.email}}</h2>
+</div>

@@ -2,3 +2,4 @@
 <div *ngFor='let employee of empArrFromParent;index as i'>
     <h2>{{i}} {{employee.name}} {{employee.age}} {{employee.email}}</h2>
 </div>
+<button (click)='fireEvent()'>send from child to parent</button>
