@@ -9,6 +9,7 @@ import { EvenBindComponent } from './even-bind/even-bind.component';
 import { TempRefVarComponent } from './temp-ref-var/temp-ref-var.component';
 import { TwoWayBindComponent } from './two-way-bind/two-way-bind.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,0 +1,81 @@
+
+<nav class="navbar navbar-expand-lg navbar-light shadow-lg p-2 mb-5 bg-transparent rounded">
+  
+<div class="container">
+  <a class="navbar-brand" href="#"><h5 style="font-family:verdana;">SH P TRAVEL CO.</h5></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><h5 style="font-family:verdana;">SignIn</h5></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><h5 style="font-family:verdana;">SignUp</h5></a>
+      </li>
+    </ul>
+  </div>
+    
+  
+</div>
+</nav>
+
+<div>
+  <div class="container">
+
+    <!-- Jumbotron Header -->
+    <div class="jumbotron bg-light" style="width: auto;">
+      <div class="fl_input_row_0">
+        <p-tabMenu [model]="items3">
+        </p-tabMenu>
+      </div>
+      
+     <div class="fl_input_row">
+      <p-dropdown [dropdownIcon]="dropDIcon"  class="fl_dropdown" [options]="groupedCities" [(ngModel)]="selectedCity" placeholder="Select Departure City" [group]="true" [style]="{'width':'40%'}">
+       </p-dropdown>
+      <i class="fa fa-exchange" aria-hidden="true"></i>
+       <p-dropdown [dropdownIcon]="dropDIcon" class="fl_dropdown" [options]="groupedCities" [(ngModel)]="selectedCity" placeholder="Select Destination City" [group]="true" [style]="{'width':'40%'}"></p-dropdown>
+    </div>
+    <div class="fl_input_row">
+      <p-calendar class="fl_calendar" [(ngModel)]="date3" [showIcon]="true" [style]="{'width':'40%'}" placeholder="Departure Date"></p-calendar>
+      <p-calendar class="f2_calendar" [(ngModel)]="date3" [showIcon]="true" [style]="{'width':'40%'}" placeholder="Return Date"></p-calendar>
+    </div>
+    <div class="col-sm-12 fl_input_button_row">
+      <button pButton type="button" label="SEARCH" class="ui-button-rounded fl_input_button"></button>
+      <button pButton type="button" label="CLEAR" class="ui-button-rounded ui-button-warning "></button>
+    </div>
+    <div class="fl_input_row" style="padding-left:40px;">
+        
+<p-table [value]="flightTableData" [responsive]="true" >
+  <ng-template pTemplate="header">
+      <tr>
+          <th style="background-color:rgba(0, 0, 255, 0.51);">Flight Name</th>
+          <th style="background-color:rgba(0, 0, 255, 0.51);">Departure</th>
+          <th style="background-color:rgba(0, 0, 255, 0.51);">Arrival</th>
+          <th style="background-color:rgba(0, 0, 255, 0.51);" >Duration</th>
+          <th style="background-color:rgba(0, 0, 255, 0.51);">Price</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-flight>
+      <tr>
+          <td><i class="fa fa-plane" aria-hidden="true"></i> {{flight.flightName}}</td>
+          <td>{{flight.departure}}</td>
+          <td>{{flight.arrival}}</td>
+          <td><i class="fa fa-clock-o" aria-hidden="true"></i> {{flight.duration}}</td>
+          <td><i class="fa fa-inr" aria-hidden="true"></i> {{flight.price}}</td>
+      </tr>
+  </ng-template>
+</p-table>
+
+
+
+    </div>
+    <p-progressSpinner [style]="{width: '50px', height: '50px'}" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
+    
+    
+    </div>
+
+
+  </div>
+</div>

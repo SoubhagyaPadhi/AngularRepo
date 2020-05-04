@@ -23,7 +23,7 @@ export class EvenBindComponent implements OnInit {
 onClickEvent(val){
   //this.greetMsg = val;
   this.eventType = val.type;
-  console.log(this.eventType);
+  this.greetMsg = this.eventType;
 }
 
 }
